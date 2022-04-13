@@ -36,9 +36,13 @@ return new class extends Migration
             function ( Blueprint $table ) 
             {
                 $table->id();
-                $table->bigInteger('first_name_id')->unsigned();
+
+                $table->bigInteger('first_name_id')->unsigned()->index();
+
                 $table->json( 'middle_name' );
-                $table->bigInteger('last_name_id')->unsigned();
+                
+                $table->bigInteger('last_name_id')->unsigned()->index();
+                
                 
                 $table->foreign( 'first_name_id' )
                       ->references( 'id' )
