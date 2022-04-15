@@ -17,6 +17,8 @@
                     $table->id();
                     $table->string( 'content' )
                           ->unique();
+
+                    $table->collation = 'utf8mb4_0900_as_cs';
                 }
             );
 
@@ -27,6 +29,8 @@
                     $table->id();
                     $table->string('content')
                           ->unique();
+                          
+                    $table->collation = 'utf8mb4_0900_as_cs';   
                 }
             );
 

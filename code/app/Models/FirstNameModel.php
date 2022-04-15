@@ -10,7 +10,12 @@
     {
         use HasFactory;
         
-        protected $table = 'first_name';
+        protected $table = 'cache_first_names';
+        public $timestamps = false;
+
+        protected $fillable = [
+            'content'
+        ];
 
     }
 ?>
